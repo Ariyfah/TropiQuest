@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TropiQuest - Map</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="island-screen">
+
+        <section class="game-map">
+
+            <!-- Island Map Artwork -->
+            <img src="assets/images/island-map.png"
+                 alt="TropiQuest Island Map">
+
+            <!-- Back Button -->
+            <button id="backbtn" class="map-ui back-area"
+                onclick="window.location.href='index.html'">
+                ← Back
+            </button>
+
+            <!-- Coin Display -->
+            <div class="map-ui coin-area">
+                🪙 <span id="coin-count">500</span>
+            </div>
+
+            <!-- Rolling Logs -->
+            <button id="rolling-logsbtn"
+                class="map-location rolling-area"
+                onclick="alert('Rolling Logs - Coming Soon!')">
+                🪵 Rolling Logs
+            </button>
+
+            <!-- Turtle Puzzle -->
+            <button id="turtle-stone-puzzlebtn"
+                class="map-location turtle-area"
+                onclick="alert('Turtle Stone Puzzle - Coming Soon!')">
+                🐢 Stone Puzzle
+            </button>
+
+            <!-- Main Island -->
+            <button id="main-islandbtn"
+                class="map-location main-area"
+                onclick="window.location.href='main-island.html'">
+                🏝️ Main Island
+            </button>
+
+            <!-- Ice Cream Shop -->
+            <button id="icecream-shopbtn"
+                class="map-location ice-cream-area"
+                onclick="alert('Ice Cream Shop - Coming Soon!')">
+                🍦 Ice Cream Shop
+            </button>
+
+            <!-- Decoration Shop -->
+            <button id="decoration-shopbtn"
+                class="map-location decoration-area"
+                onclick="alert('Decoration Shop - Coming Soon!')">
+                🌺 Decoration Shop
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

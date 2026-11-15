@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: serif;
+    min-height: 100vh; 
+}
+
+.start-screen{
+    min-height: 100vh;
+    background-color: #006D2C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+
+.game-title{
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: white;
+}
+
+.game-title h1 {
+    font-size: 60px;
+    color: #ffe09b;
+    font-weight: bold;
+}
+
+.start-game {
+    margin-top: 60px;
+    color: white;
+}
+
+.start-game h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.start-game p {
+    margin-bottom: 20px;
+}
+
+.start-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 250px;
+}
+
+.start-buttons button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ffe09b;
+    color: #49351f;
+}
+
+.start-buttons button:hover {
+    background-color: #f5c46a;
+}
+
+
+.guest-note {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+
+/* ISLAND MAP PAGE */
+
+.island-screen {
+    min-height: 100vh;
+    background-color: #006D2C;
+    padding: 20px;
+}
+
+/* Map Container */
+
+.game-map {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-map img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Back Button and Coin Display */
+
+.map-ui {
+    position: absolute;
+    z-index: 2;
+    top: 5%;
+    background: #fff3c4;
+    color: #49351f;
+    border: 3px solid #8b6338;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-family: serif;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #a77b43;
+}
+
+.back-area {
+    left: 5%;
+    cursor: pointer;
+}
+
+.coin-area {
+    right: 5%;
+}
+
+/* Location Buttons */
+
+.map-location {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    background: #fff3c4;
+    color: #49351f;
+    border: 3px solid #8b6338;
+    border-radius: 15px;
+
+    padding: 10px 15px;
+    font-family: serif;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 5px 0 #a77b43;
+    transition: 0.2s;
+}
+
+.map-location:hover {
+    transform: translate(-50%, -60%);
+    background: #ffe09b;
+}
+
+/* Location Positions */
+
+.rolling-area {
+    left: 27%;
+    top: 45%;
+}
+
+.turtle-area {
+    left: 77%;
+    top: 45%;
+}
+
+.main-area {
+    left: 50.5%;
+    top: 56%;
+}
+
+.ice-cream-area {
+    left: 26%;
+    top: 82%;
+}
+
+.decoration-area {
+    left: 76%;
+    top: 82%;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 600px) {
+
+    .island-screen {
+        padding: 5px;
+    }
+
+    .map-ui {
+        padding: 5px 8px;
+        font-size: 11px;
+        border-width: 2px;
+    }
+
+    .map-location {
+        padding: 5px 7px;
+        font-size: 9px;
+        border-width: 1px;
+        border-radius: 8px;
+    }
+
+}
