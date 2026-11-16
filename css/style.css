@@ -76,6 +76,98 @@ body{
 }
 
 
+/* ACCOUNT PAGES - LOGIN AND SIGNUP */
+
+.account-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        to bottom,
+        #87d8e8,
+        #c7edb0,
+        #63b75b
+    );
+    padding: 20px;
+}
+
+.account-box {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background-color: #fff3c4;
+    border: 4px solid #8b6338;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.account-box h1 {
+    color: #006D2C;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.account-box h2 {
+    color: #49351f;
+}
+
+.account-box p {
+    color: #49351f;
+}
+
+.account-box form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.account-box label {
+    color: #49351f;
+    font-weight: bold;
+}
+
+.account-box input {
+    padding: 12px;
+    border: 2px solid #b58a55;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.account-box button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #006D2C;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.account-box button:hover {
+    background-color: #008c3b;
+}
+
+.account-box a {
+    color: #006D2C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.account-box a:hover {
+    text-decoration: underline;
+}
+
+#loginMessage {
+    font-size: 14px;
+}
+
+
 /* ISLAND MAP PAGE */
 
 .island-screen {
@@ -200,4 +292,121 @@ body{
         border-radius: 8px;
     }
 
+}
+
+/*MAIN ISLAND PAGE*/
+
+.main-island-screen{
+    min-height:100vh;
+    background: linear-gradient(
+        to bottom, #87d8e8,#c7edb0 55%, #63b75b
+    );
+    padding:20px;
+}
+
+/*Header*/
+
+.main-island-header{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 15px 20px;
+    background-color:#fff3c4;
+    border:3px solid #8b633b;
+    border-radius:18px;
+}
+
+.main-island-header h1{
+    color:#49351f;
+    font-size: 28px;
+}
+
+.main-island-header button,.shopbutton{
+    background-color:#ffe09b;
+    color: #49351f;
+    border: 3px solid #8b6338;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.coin-display {
+    background-color: #fff;
+    color: #49351f;
+    padding: 10px 15px;
+    border: 2px solid #d6a744;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+/* Island Area */
+
+.main-island-area {
+    position: relative;
+    max-width: 1200px;
+    min-height: 550px;
+    margin: 25px auto;
+    background: linear-gradient(
+        to bottom,
+        #a9df83,
+        #63b75b
+    );
+    border: 5px solid #477f35;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* Temporary Monkey Character */
+
+.monkey {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}
+
+/* Shop Button */
+
+.shop-button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.shop-button:hover,
+.main-island-header button:hover {
+    background-color: #ffcf70;
+    transform: translateY(-3px);
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+
+    .main-island-header {
+        padding: 10px;
+    }
+
+    .main-island-header h1 {
+        font-size: 18px;
+    }
+
+    .main-island-header button,
+    .shop-button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    .main-island-area {
+        min-height: 450px;
+    }
+
+    .monkey {
+        font-size: 75px;
+    }
 }
