@@ -1,26 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TropiQuest - Main Island</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TropiQuest - Main Island</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <main class="main-island-screen">
-            <!Game header>
-            <header class="main-island-header">
-                <button onclick="window.location.href='island.html'">Map</button>
-                <h1>TropiQuest</h1>
-                <div class="coin-display">🪙 500</div> 
-            </header>
-            <!Island Game Area>
-            <section class="main-island-area">
-                <div class="monkey">🐒</div>
-                <button class="shop-button">🛍️ Shop</button>
-            </section>
-        </main>
-    </body>
+<body>
+    <main class="main-island-screen">
 
+        <!-- Game Header -->
+        <header class="main-island-header">
+            <button onclick="window.location.href='island.html'">
+                Map
+            </button>
+
+            <h1>TropiQuest</h1>
+
+            <div class="coin-display">
+                🪙 <span id="coinCount" class="coin-amount">500</span>
+            </div>
+        </header>
+
+        <!-- Island Game Area -->
+        <section class="main-island-area">
+
+            <!-- Island Decorations -->
+            <div class="island-sun">☀️</div>
+            <div class="island-tree tree-left">🌴</div>
+            <div class="island-tree tree-right">🌴</div>
+            <div class="island-flowers">🌺 🌼 🌸</div>
+
+            <!-- Main Character -->
+            <div class="monkey">🐒</div>
+
+            <!-- Shop Button -->
+            <button class="shop-button" id="openShop">
+                🛍️ Shop
+            </button>
+
+            <!-- Shop Panel -->
+            <div class="island-shop-panel" id="shopPanel" hidden>
+                <div class="shop-panel-header">
+                    <h2>Island Shop</h2>
+                    <button id="closeShop" aria-label="Close shop">✕</button>
+                </div>
+
+                <p>Decorate your island!</p>
+
+                <div class="shop-items">
+                    <div class="shop-item">
+                        <span>🌴</span>
+                        <h3>Palm Tree</h3>
+                        <p>🪙 100</p>
+                        <button disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="shop-item">
+                        <span>🌺</span>
+                        <h3>Flowers</h3>
+                        <p>🪙 50</p>
+                        <button disabled>Coming Soon</button>
+                    </div>
+
+                    <div class="shop-item">
+                        <span>🪑</span>
+                        <h3>Bench</h3>
+                        <p>🪙 150</p>
+                        <button disabled>Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

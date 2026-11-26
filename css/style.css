@@ -323,7 +323,7 @@ body{
     font-size: 28px;
 }
 
-.main-island-header button,.shopbutton{
+.main-island-header button,.shop-button{
     background-color:#ffe09b;
     color: #49351f;
     border: 3px solid #8b6338;
@@ -409,4 +409,254 @@ body{
     .monkey {
         font-size: 75px;
     }
+}
+
+
+/* MAIN ISLAND - UPDATED DESIGN */
+
+.main-island-area {
+    background:
+        radial-gradient(ellipse at 50% 65%, #a8dc79 0%, #78c65d 65%, #5da74e 100%);
+    min-height: 570px;
+    box-shadow: inset 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.island-sun {
+    position: absolute;
+    top: 8%;
+    right: 12%;
+    font-size: 55px;
+}
+
+.island-tree {
+    position: absolute;
+    font-size: clamp(70px, 10vw, 125px);
+    filter: drop-shadow(0 8px 4px rgba(0, 0, 0, 0.15));
+}
+
+.tree-left {
+    left: 8%;
+    top: 20%;
+}
+
+.tree-right {
+    right: 8%;
+    top: 28%;
+}
+
+.island-flowers {
+    position: absolute;
+    bottom: 15%;
+    left: 12%;
+    font-size: 35px;
+}
+
+.monkey {
+    top: 55%;
+    font-size: 110px;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.2));
+}
+
+.shop-button {
+    z-index: 3;
+    background: #ffe09b;
+    color: #49351f;
+    border: 3px solid #8b6338;
+    border-radius: 15px;
+    padding: 12px 22px;
+    font: bold 18px serif;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #a77b43;
+}
+
+/* SHOP PANEL */
+
+.island-shop-panel {
+    position: absolute;
+    z-index: 5;
+    bottom: 15px;
+    left: 3%;
+    width: 94%;
+    background: #fff3c4;
+    border: 4px solid #8b6338;
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.island-shop-panel[hidden] {
+    display: none;
+}
+
+.shop-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.shop-panel-header h2 {
+    color: #49351f;
+}
+
+#closeShop {
+    background: #ffe09b;
+    border: 2px solid #8b6338;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.shop-items {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 15px 0;
+}
+
+.shop-item {
+    flex: 0 0 150px;
+    text-align: center;
+    background: white;
+    border: 2px solid #d6a744;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.shop-item span {
+    font-size: 45px;
+}
+
+.shop-item h3 {
+    margin: 10px 0;
+    color: #49351f;
+}
+
+.shop-item p {
+    margin-bottom: 10px;
+    color: #49351f;
+}
+
+.shop-item button {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .island-tree {
+        font-size: 65px;
+    }
+
+    .monkey {
+        font-size: 80px;
+    }
+
+    .island-shop-panel {
+        padding: 12px;
+    }
+
+    .shop-item {
+        flex-basis: 125px;
+    }
+}
+
+
+/* TURTLE WORDLE */
+
+.turtle-wordle-screen{
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        to bottom,
+        #87d8e8,
+        #c7edb0,
+        #63b75b
+    );
+    padding: 20px;
+
+}
+
+.turtle-wordle-screen .main-island-header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#gameBoard{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    margin: 20px auto;
+    max-width: fit-content;
+}
+
+.cell{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2em;
+    background-color: #f5fae9;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cell.correct{
+    background: #538d4e;
+    color: white;
+}
+
+.cell.semi-correct{
+    background: #b59f3b;
+    color: white;
+}
+
+.cell.incorrect{
+    background: #3a3a3c;
+    color: white;
+}
+
+@media(max-width:400px){
+    .cell{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #333;
+        text-align: center;
+        line-height: 40px;
+        font-size: 1em;
+    }
+}
+
+#guessInput{
+    width: 180px;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    align-self: center;
+}
+.wordle-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#guessBtn, #restartBtn {
+    color: white;
+    background-color: #397b49;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: center;
+}
+
+#guessBtn:hover , #restartBtn:hover{
+    background-color: #285c35;
 }

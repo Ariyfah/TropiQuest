@@ -109,3 +109,106 @@ if (loginForm){
         }
     });
 }
+
+
+
+
+/* TROPIQUEST COIN SYSTEM */
+
+const STARTING_COINS = 500;
+
+// Start a new guest session
+function playAsGuest() {
+    localStorage.removeItem("tropiquestCurrentUser");
+    sessionStorage.setItem("tropiquestGuestCoins", STARTING_COINS);
+    window.location.href = "island.html";
+}
+
+// Get current balance
+function getCoins() {
+    const username = localStorage.getItem("tropiquestCurrentUser");
+
+    if (!username) {
+        return Number(
+            sessionStorage.getItem("tropiquestGuestCoins") ?? STARTING_COINS
+        );
+    }
+
+    const accounts = JSON.parse(
+        localStorage.getItem("tropiquestAccounts")
+    ) || [];
+
+    const account = accounts.find(
+        user => user.username === username
+    );
+
+    return account ? (account.coins ?? STARTING_COINS) : STARTING_COINS;
+}
+
+// Save new balance
+function saveCoins(amount) {
+    const username = localStorage.getItem("tropiquestCurrentUser");
+
+    if (!username) {
+        sessionStorage.setItem("tropiquestGuestCoins", amount);
+    } else {
+        const accounts = JSON.parse(
+            localStorage.getItem("tropiquestAccounts")
+        ) || [];
+
+        const account = accounts.find(
+            user => user.username === username
+        );
+
+        if (account) {
+            account.coins = amount;
+
+            localStorage.setItem(
+                "tropiquestAccounts",
+                JSON.stringify(accounts)
+            );
+        }
+    }
+
+    updateCoinDisplay();
+}
+
+// Update all coin displays on the current page
+function updateCoinDisplay() {
+    document.querySelectorAll(".coin-amount").forEach(element => {
+        element.textContent = getCoins();
+    });
+}
+
+// Add or deduct coins
+function changeCoins(amount) {
+    const newBalance = getCoins() + amount;
+
+    if (newBalance < 0) {
+        return false;
+    }
+
+    saveCoins(newBalance);
+    return true;
+}
+
+updateCoinDisplay();
+
+
+// MAIN ISLAND SHOP PANEL
+
+const openShop = document.getElementById("openShop");
+const closeShop = document.getElementById("closeShop");
+const shopPanel = document.getElementById("shopPanel");
+
+if (openShop && closeShop && shopPanel) {
+    openShop.addEventListener("click", function() {
+        shopPanel.hidden = false;
+        openShop.hidden = true;
+    });
+
+    closeShop.addEventListener("click", function() {
+        shopPanel.hidden = true;
+        openShop.hidden = false;
+    });
+}

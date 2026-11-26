@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "name": "tropiquest",
+  "version": "1.0.0",
+  "description": "An Interactive Tropical Island Mini-Game",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ariyfah/TropiQuest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ariyfah/TropiQuest/issues"
+  },
+  "homepage": "https://github.com/Ariyfah/TropiQuest#readme"
+}
